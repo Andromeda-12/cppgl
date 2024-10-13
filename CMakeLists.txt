@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.5.0)
 set(PROJECT_NAME CPPGL)
 project(${PROJECT_NAME} VERSION 0.1.0 LANGUAGES C CXX)
 
-add_executable(${PROJECT_NAME} ./src/main.cpp)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-target_link_libraries(CPPGL glfw)
+add_executable(${PROJECT_NAME} ./src/main.cpp)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
